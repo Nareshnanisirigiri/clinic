@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider, CssBaseline, IconButton } from "@mui/material";
+import { useState } from "react";
+import { lightTheme, darkTheme } from "./theme";
 
-function App() {
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
+import TreatmentPage from "./pages/TreatmentPage";
+
+import AboutPage from "./pages/AboutPage";
+
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+
+export default function App() {
+  const [dark, setDark] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Navbar />
+        <IconButton
+          onClick={() => setDark(!dark)}
+          sx={{ position: "fixed", top: 80, right: 20 }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <DarkModeIcon />
+        </IconButton>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/Treatment" element={<TreatmentPage />} />
+
+                    <Route path="/AboutPage" element={<AboutPage />} />
+
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
-
-export default App;
