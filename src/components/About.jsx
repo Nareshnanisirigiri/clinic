@@ -34,11 +34,13 @@ export default function About() {
             variant="h6"
             textAlign="center"
             color="text.secondary"
-            sx={{ mb: 6, marginLeft:80 , marginTop:20}}
+            sx={{fontSize: "1.1rem", lineHeight: 1.8 , mb: 6, marginLeft:80 , marginTop:15}}
           >
-            PhysioTattva is a holistic physiotherapy and rehabilitation centre  dedicated to healing
-            through science, care, and movement. We combine evidence-based clinical practices with
-            compassionate,  patient-centred treatment to restore strength, mobility, and confidence.
+           At PhysioTattva, we are committed to bring access to quality physio care through ultra-modern clinics and high-skilled practitioners to all. Our world-class therapists keep a strong focus on patient needs and deliver the highest level of care. <br /> <br />
+
+PhysioTattva, a unified brand of two groups, Cadabams group and Brahmbhatt, is an initiative of Cadabams Brahmbhatt healthcare LLP. PhysioTattva is a brand that covers aspects of physical health and rehabilitation services.
+
+
           </Typography>
         </motion.div>
 
@@ -54,7 +56,7 @@ export default function About() {
                 height: "400px",
                 objectFit: "cover",
                 borderRadius: "16px",
-                marginTop:-300
+                marginTop:-600
               }}
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -114,7 +116,7 @@ export default function About() {
           </Grid>
 
           {/* CONTENT */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} sx={{mb:-10}}>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -125,11 +127,9 @@ export default function About() {
               </Typography>
 
               <Typography sx={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-                PhysioTattva clinics are designed with state-of-the-art infrastructure and modern
-                rehabilitation equipment to support effective care.
+                 The primary aim of our multi-dimensional approach is to provide quality pain management service. Understanding the problem from a root level and finding a way to provide relief is our overall focus. The recovery we aim at is all-inclusive that impact the patient’s overall life. Bringing them back to the normal track is our challenge.
                 <br /><br />
-                We focus on personalized treatment plans tailored to individual needs, ensuring faster,
-                safer recovery while improving mobility, strength, and overall wellbeing.
+               Patient-oriented: We value the patients who rely on us to attain a better quality of life. We provide the best program to them, depending on the requirements and necessities. We diligently offer our assistance, starting from the appointment to consultation till program recovery. Regular check-ups with Ergonomists or Dieticians and other health allies are convenient and hassle-free.
               </Typography>
             </motion.div>
           </Grid>

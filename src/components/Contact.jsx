@@ -110,7 +110,7 @@ export default function Contact() {
               <motion.img
                 variants={floatAnim}
                 animate="animate"
-                src="download.png"
+                src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3eDc0NDhwMnZjMmhoc2lkOGVlMDcxa2J1MmJwOWtxMmppa2tuMWRwdSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/MEjG5NXKKS68LvGIP2/giphy.gif"
                 alt="Contact GIF"
                 style={{
                   width: "100%",
