@@ -78,7 +78,14 @@ const Treatment = () => {
     const theme = useTheme();
 
     return (
-        <Box>
+        <Box sx={{
+    py: 10,
+    backgroundImage:
+      "linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}>
             {/* Hero Banner */}
             <Box
                 sx={{
@@ -88,7 +95,7 @@ const Treatment = () => {
                     textAlign: 'center',
                 }}
             >
-                <Container maxWidth="md">
+                <Container maxWidth="md" >
                     <Typography variant="h2" sx={{ fontWeight: 700, mb: 2 }}>
                         Our Treatments
                     </Typography>

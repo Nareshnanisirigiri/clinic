@@ -191,6 +191,7 @@ import React from "react";
 import { Box, Container, Typography, Button, Grid, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image1 from "../images/WhatsApp Image 2026-01-29 at 08.17.32 (1).jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -269,7 +270,7 @@ export default function Hero() {
               <motion.div variants={fadeUp}>
                 <Typography
                   variant="h6"
-                  color="text.secondary"
+                  color="black"
                   paragraph
                   sx={{ mb: 4, maxWidth: "600px" }}
                 >
@@ -301,7 +302,7 @@ export default function Hero() {
                   <Button
                     variant="outlined"
                     size="large"
-                    sx={{ py: 1.5, px: 4, borderRadius: "30px" }}
+                    sx={{ py: 1.5, px: 4, borderRadius: "30px", color: "black",  }}
                   >
                     View Services
                   </Button>
@@ -359,8 +360,8 @@ export default function Hero() {
               >
                 <Box
                   component="img"
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1350&q=80"
-                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  src={Image1} 
+                  sx={{ width: "600px", height: "650px", objectFit: "cover" }}
                   alt="Physiotherapy"
                 />
               </Box>

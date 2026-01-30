@@ -1,46 +1,68 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline, IconButton } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { lightTheme, darkTheme } from "./theme";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Preloader from "./components/Preloader";
+import WhatsAppFloat from "./components/WhatsAppFloat"; // ✅ add this
+
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import TreatmentPage from "./pages/TreatmentPage";
-
 import AboutPage from "./pages/AboutPage";
 
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 export default function App() {
   const [dark, setDark] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Show preloader for 3 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <ThemeProvider theme={dark ? darkTheme : lightTheme}>
       <CssBaseline />
-      <BrowserRouter>
-        <Navbar />
-        <IconButton
-          onClick={() => setDark(!dark)}
-          sx={{ position: "fixed", top: 80, right: 20 }}
-        >
-          <DarkModeIcon />
-        </IconButton>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/Treatment" element={<TreatmentPage />} />
+      {/* Preloader */}
+      {loading && <Preloader />}
 
-                    <Route path="/AboutPage" element={<AboutPage />} />
+      {!loading && (
+        <BrowserRouter>
+          <Navbar />
 
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+          {/* Floating WhatsApp Icon */}
+          <WhatsAppFloat />
+
+          {/* Dark Mode Button */}
+          <IconButton
+            onClick={() => setDark(!dark)}
+            sx={{ position: "fixed", top: 80, right: 20, zIndex: 1000 }}
+          >
+            <DarkModeIcon />
+          </IconButton>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/Treatment" element={<TreatmentPage />} />
+            <Route path="/AboutPage" element={<AboutPage />} />
+          </Routes>
+
+          <Footer />
+        </BrowserRouter>
+      )}
     </ThemeProvider>
   );
 }

@@ -11,6 +11,13 @@ import {
 import { motion } from "framer-motion";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import Img1 from"../images/WhatsApp Image 2026-01-29 at 08.17.32 (1).jpeg";
+import Img2 from"../images/doctor-2.jpeg";
+import Img3 from"../images/doctor-3.jpeg";
+import Img4 from"../images/doctor-4.jpeg";
+
+
+
 
 /* ---------------- Animations ---------------- */
 const fadeUp = {
@@ -60,22 +67,22 @@ const doctors = [
   {
     name: "Dr. Ananya Rao",
     qualification: "MPT (Orthopedics), PhD",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
+    img: Img1,
   },
   {
     name: "Dr. Rajesh Kumar",
     qualification: "MPT (Sports Physiotherapy)",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    img: Img2,
   },
   {
     name: "Dr. Priya Sharma",
     qualification: "MPT (Neurology)",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
+    img: Img3,
   },
   {
     name: "Dr. Arjun Patel",
     qualification: "MPT (Cardio Pulmonary)",
-    img: "https://randomuser.me/api/portraits/men/75.jpg",
+    img: Img4,
   },
 ];
 

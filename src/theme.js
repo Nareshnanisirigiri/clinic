@@ -1,42 +1,50 @@
 // src/theme.js
 import { createTheme } from "@mui/material/styles";
 
+/* ===== LIGHT THEME ===== */
 export const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#00796B", // teal/green-blue primary
+      main: "#9BC53D", // logo green
     },
     secondary: {
-      main: "#26A69A", // light green accent
+      main: "#0B5C7A", // logo blue
     },
     background: {
-      default: "#FFFFFF", // clean white
-      paper: "#F5F5F5",   // subtle light grey
+      default: "#FFFFFF",
+      paper: "#F2F8F6",
     },
     text: {
-      primary: "#004D40", // dark green text
-      secondary: "#00796B", // lighter green text
+      primary: "#0B5C7A", // deep blue text
+      secondary: "#6FAF3A", // soft green accent
     },
+  },
+  typography: {
+    fontFamily: "Roboto, Arial, sans-serif",
   },
 });
 
+/* ===== DARK THEME ===== */
 export const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#26A69A", // accent green in dark
+      main: "#9BC53D", // logo green
     },
     secondary: {
-      main: "#00796B", // main brand color inverted
+      main: "#0B5C7A", // logo blue
     },
     background: {
-      default: "#00332E", // very dark teal
-      paper: "#004D40",   // dark green
+      default: "#000000", // logo black background
+      paper: "#0E2F3D",   // dark blue surface
     },
     text: {
-      primary: "#E0F2F1", // light teal text
-      secondary: "#B2DFDB", // softer accent
+      primary: "#E6F4F1", // soft white/mint
+      secondary: "#9BC53D",
     },
+  },
+  typography: {
+    fontFamily: "Roboto, Arial, sans-serif",
   },
 });

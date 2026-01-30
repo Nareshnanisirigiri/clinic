@@ -56,26 +56,25 @@ export default function Footer() {
               PhysioTattva
             </Typography>
             <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-              Healing through science, care and movement. <br /> 
-              Trusted physiotherapy and rehabilitation services for better living.
+              At Physio Tattva, we are committed to <br />bring access to quality physio care <br /> through ultra-modern clinics and <br />high-skilled practitioners to all.<br /> Our world-class therapists keep <br />a strong focus on patient needs <br />and deliver the highest level of care.
             </Typography>
 
             {/* Social Icons */}
             <Stack direction="row" spacing={1} mt={2}>
               <motion.div {...iconHover}>
-                <IconButton color="success">
+                <IconButton sx={{color:"#2bf55e"}}>
                   <WhatsAppIcon />
                 </IconButton>
               </motion.div>
 
-              <motion.div {...iconHover}>
-                <IconButton color="primary">
+              <motion.div {...iconHover}   >
+                <IconButton sx={{color:"#36bff1"}}>
                   <FacebookIcon />
                 </IconButton>
               </motion.div>
 
-              <motion.div {...iconHover}>
-                <IconButton sx={{ color: "#E1306C" }}>
+              <motion.div {...iconHover} >
+                <IconButton sx={{ color: "#ff58bf" }} >
                   <InstagramIcon />
                 </IconButton>
               </motion.div>
@@ -83,7 +82,7 @@ export default function Footer() {
           </Grid>
 
           {/* QUICK LINKS */}
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={2} sx={{ml:5}}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Quick Links
             </Typography>
@@ -97,7 +96,7 @@ export default function Footer() {
           </Grid>
 
           {/* CONTACT INFO */}
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={3} sx={{ml:5}}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Contact Info
             </Typography>
@@ -106,23 +105,23 @@ export default function Footer() {
               <motion.div >
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                   <LocationOnIcon />
-                  <Typography variant="body2">
-                    Hyderabad, Telangana, India
+                  <Typography>
+                   280, 15th Cross Rd, 5th Phase, <br />KR Layout, Prasanti Nagar, <br />J. P. Nagar, <br />Bengaluru, Karnataka 560078
                   </Typography>
                 </Box>
               </motion.div>
 
               <motion.div >
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1,  }}>
                   <PhoneIcon />
                   <Typography variant="body2">
-                    +91 98765 43210
+                    +91 8147096111
                   </Typography>
                 </Box>
               </motion.div>
 
               <motion.div >
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1 ,}}>
                   <EmailIcon />
                   <Typography variant="body2">
                     physiotattva@gmail.com
@@ -133,7 +132,7 @@ export default function Footer() {
           </Grid>
 
           {/* MAP + BOOK BUTTON */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sx={{ml:5}}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Our Location
             </Typography>
